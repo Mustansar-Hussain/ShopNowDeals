@@ -2,13 +2,13 @@
 include('simpleimage.php');
 class ManageImage{
  
- public function image($path,$image_name,$imagex,$imagey)
-  {
-        $final=new SimpleImage();
-		$final->load($path.'temp.jpg');
-               $final->resize($imagex,$imagey);
-        if($final->save($path.($image_name).'.jpg'))
-	   return true;	
+ public function image($temp_path , $path_to_save , $image_name, $image_exten ,$imagex,$imagey)
+ {  
+        $final = new SimpleImage();
+        $final->load($temp_path.'temp.'.$image_exten);
+        $final->resize($imagex,$imagey);
+        if($final->save($path_to_save.($image_name).'.'.$image_exten))
+           return true;	
         else
           return false;
    }

@@ -66,7 +66,7 @@ $autoload['libraries'] = array('database', 'pagination', 'session', 'user_agent'
 */
 
 //$autoload['helper'] = array();
-$autoload['helper'] = array('url', 'form', 'cookie','common', 'file');
+$autoload['helper'] = array('url', 'form', 'cookie','common');
 /*
 | -------------------------------------------------------------------
 |  Auto-load Config files

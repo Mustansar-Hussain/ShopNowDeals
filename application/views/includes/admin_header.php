@@ -7,6 +7,8 @@
         <link href="<?php echo $res_url; ?>/admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <!-- styles -->
         <link href="<?php echo  $res_url; ?>/admin/css/styles.css" rel="stylesheet">
+        <link href="<?php echo $res_url; ?>css/datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+        <link href="<?php echo $res_url; ?>css/datepicker/bootstrap-datetimepicker.css" rel="stylesheet">
     </head>
     <body>
         <div class="header">
@@ -28,7 +30,7 @@
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
                                         <ul class="dropdown-menu animated fadeInUp">
-                                            <li><a href="#">Logout</a></li>
+                                            <li><a href="<?php echo site_url("admin/login/logout");   ?>">Logout</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -46,8 +48,12 @@
                             <!-- Main menu -->
                             <li class="current"><a href="#">Manage Deals</a></li>
                             <li><a href="#">Weekly Deals</a></li>
-                            <li><a href="#">Top Deals</a></li>
+                            <li><a href="<?php echo base_url()."admin/top_deals"  ?>">Top Deals</a></li>
                             <li><a href="#">Top Companies</a></li>
                         </ul>
                     </div>
                 </div>
+                
+                
+                
+                

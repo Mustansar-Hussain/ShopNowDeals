@@ -77,9 +77,9 @@ class MY_Controller extends CI_Controller {
 
     function destroy_session() {
         $this->session->sess_destroy();
-        redirect("/login");
+        redirect("admin/login");
     }
-
+   
     function SendEmail($to, $subject, $message) {
         $result = $this->email
                 ->from('shirleyn@bsa-brmc.org')

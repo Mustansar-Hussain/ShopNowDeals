@@ -1,7 +1,7 @@
 <?php
 
 class Deals_model extends CI_Model {
-   
+
     function __construct() {
         parent::__construct();
     }
@@ -40,19 +40,38 @@ class Deals_model extends CI_Model {
             return array();
     }
 
-    function update_deal($deal_id, $data) {
-        return $this->db->update($this->Tables("deals"), $data, array("DealID" => $deal_id));
-    }
+    function get_top_deals(){
 
-    function remove_deal($deal_id) {
-        return $this->db->delete($this->Tables("deals"), array("DealID" => $deal_id));
-    }
+       $Deals = $this->Tables("deals");
+ 
 
-    Private function Tables($table) {
-        $TABLE['deals'] = 'deals';
-        $TABLE['user'] = 'user';
-        $TABLE['companies'] = 'companies';
-        return $TABLE[$table];
-    }
+       $this->db->select('*');
+       $this->db->from($Deals);
+       $this->db->where('DealTop','1');
+
+       $query = $this->db->get();
+       echo $this->db->last_query(); die();
+       $result = $query->result_array();
+       if (count($result) > 0)
+        return $result;
+       else
+        return array();
+
+}
+
+function update_deal($deal_id, $data) {
+    return $this->db->update($this->Tables("deals"), $data, array("DealID" => $deal_id));
+}
+
+function remove_deal($deal_id) {
+    return $this->db->delete($this->Tables("deals"), array("DealID" => $deal_id));
+}
+
+Private function Tables($table) {
+    $TABLE['deals'] = 'deals';
+    $TABLE['user'] = 'user';
+    $TABLE['companies'] = 'companies';
+    return $TABLE[$table];
+}
 
 }

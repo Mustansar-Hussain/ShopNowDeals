@@ -8,7 +8,6 @@ class home extends MY_Controller {
     }
    
     function index() {
-      //  echo "some working"; exit();
        
 //        $classes = $this->ClassModel->get_all_classes($this->council_id, '', true, $items_per_page * ($current_page - 1), $items_per_page);
 //        $all_classes_times = $this->ClassModel->get_all_classes($this->council_id);

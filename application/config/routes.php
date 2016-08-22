@@ -40,23 +40,20 @@ if (!defined('BASEPATH'))
   | in the URL cannot be matched to a valid route.
   |
  */
-// $route['default_controller'] = 'Home';
-// $route['404_override'] = 'home/index';
-// $route['admin'] = 'admin/user/index';
-// $route['login'] = 'users/login';
-// $route['dashboard'] = 'admin/dashboard/index';
-// $route['default_controller'] = "Home";
-// $route['admin/maintain'] = "admin/dashboard/maintain";
-// $route["report_specialprograms/(:any)"] = "admin/report_specialprograms/report/$1";
-// $route["report_roster/(:any)"] = "admin/report_roster/report/$1";
-// $route["fullunitsummary/(:any)"] = "admin/report/fullunitsummary/$1";
-// $route["report_prepaid/(:any)"] = "admin/report/prepaid/$1";
-// //Camp Admin
-// $route['CampAdmin/maintain'] = "CampAdmin/dashboard/maintain";
-// $route["CampAdmin_report_roster/(:any)"] = "CampAdmin/report_roster/report/$1";
-// $route["CampAdmin_fullunitsummary/(:any)"] = "CampAdmin/report/fullunitsummary/$1";
-// $route['404_override'] = '';
+//$route['default_controller'] = 'Home';
+$route['404_override'] = 'home/index';
+$route['admin'] = 'admin/dashboard';
+$route['deals'] = "admin/dashboard/deals";
+$route['dashboard'] = 'admin/dashboard/index';
+$route['default_controller'] = "Home";
+$route['admin/maintain'] = "admin/dashboard/maintain";
+$route["report_specialprograms/(:any)"] = "admin/report_specialprograms/report/$1";
+$route["report_roster/(:any)"] = "admin/report_roster/report/$1";
+$route["fullunitsummary/(:any)"] = "admin/report/fullunitsummary/$1";
+$route["report_prepaid/(:any)"] = "admin/report/prepaid/$1";
+//Camp Admin
+$route['CampAdmin/maintain'] = "CampAdmin/dashboard/maintain";
+$route["CampAdmin_report_roster/(:any)"] = "CampAdmin/report_roster/report/$1";
+$route["CampAdmin_fullunitsummary/(:any)"] = "CampAdmin/report/fullunitsummary/$1";
 
-$route['default_controller'] = 'Home';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
